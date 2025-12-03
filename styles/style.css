@@ -1,0 +1,302 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Bahnschrift", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+        background-image: url("../visuals/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        color: #f8f8f8;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* HEADER */
+    .header {
+        background-color: #1a1a1a;
+        padding: 20px 0;
+        text-align: center;
+        border-bottom: 4px solid #ff2e2e;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-title {
+        font-family: 'RubikWetPaint-Regular', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #ff2e2e;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 4px #000;
+    }
+
+    /* MAIN */
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 16px;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    /* WELCOME SECTION */
+    .welcome-container {
+        display: block;
+        max-width: 650px;
+        background: #111;
+        padding: 24px;
+        border: 2px solid #ff2e2e;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #000;
+        text-align: center;
+    }
+
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.35;
+    }
+
+    .welcome-container.hidden {
+        display: none;
+    }
+
+    .intro-title {
+        color: #ff2e2e;
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+        text-shadow: 1px 1px 4px #000;
+    }
+
+    .intro-text {
+        text-align: left;
+        color: #e5e5e5;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .intro-text p {
+        margin-bottom: 12px;
+    }
+
+    .intro-text ul {
+        margin-left: 20px;
+        margin-bottom: 16px;
+    }
+
+    .intro-text li {
+        margin-bottom: 6px;
+    }
+
+    /* BUTTONS */
+    .start-quit-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    .start-button,
+    .quit-button {
+        margin: 0 8px;
+    }
+
+    .start-button {
+        background-color: #ff2e2e;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: 0.2s ease;
+        box-shadow: 0 0 6px rgba(255, 46, 46, 0.5);
+    }
+
+    .start-button:hover {
+        transform: scale(1.05);
+        background-color: #ff4a4a;
+    }
+
+    .start-button:active {
+        transform: scale(0.95);
+    }
+
+    .quit-button {
+        background-color: #ff2e2e;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: 0.2s ease;
+        box-shadow: 0 0 6px rgba(255, 46, 46, 0.5);
+    }
+
+    .quit-button:hover {
+        transform: scale(1.05);
+        background-color: #ff4a4a;
+    }
+
+    .quit-button:active {
+        transform: scale(0.95);
+    }
+
+    .score-board {
+        margin-top: 20px;
+        padding: 16px;
+        background: #0d0d0d;
+        border: 1px solid #ff2e2e;
+        border-radius: 6px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .score-board h3 {
+        color: #ff2e2e;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px #000;
+    }
+
+    .score-list.active {
+        display: block;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .score-list li {
+        color: rgb(221, 221, 221);
+        margin-bottom: 6px;
+        padding-left: 4px;
+    }
+
+    .score-list.hidden {
+        display: none;
+    }
+
+    .empty-score.active {
+        display: block;
+        color: rgb(153, 153, 153);
+        font-style: italic;
+    }
+
+    .empty-score.hidden {
+        display: none;
+    }
+
+    /* GAME SECTION */
+    .game-container {
+        display: block;
+        max-width: 650px;
+        background: #111;
+        padding: 24px;
+        border: 2px solid #ff2e2e;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #000;
+        text-align: center;
+    }
+
+    .game-container.hidden {
+        display: none;
+    }
+
+    .shoot-self,
+    .shoot-opponent,
+    .replay-button {
+        background-color: #ff2e2e;
+        color: #fff;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: 0.2s ease;
+        margin: 10px;
+        box-shadow: 0 0 6px rgba(255, 46, 46, 0.5);
+    }
+
+    .shoot-self:hover,
+    .shoot-opponent:hover,
+    .replay-button:hover {
+        transform: scale(1.05);
+        background-color: #ff4a4a;
+    }
+
+    .shoot-self:active,
+    .shoot-opponent:active,
+    .replay-button:active {
+        transform: scale(0.95);
+    }
+
+    .shoot-opponent.disabled,
+    .shoot-opponent:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        background-color: #a11a1a;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .message-area,
+    .final-message-area {
+        color: #e5e5e5;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .final-message-area {
+        font-weight: 700;
+        color: #ff4a4a;
+        font-size: 1.2rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        margin-top: auto;
+        text-align: center;
+        padding: 20px 0;
+        background-color: #1a1a1a;
+        color: #ff2e2e;
+        border-top: 4px solid #ff2e2e;
+        box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* DESKTOP */
+    @media (min-width: 769px) {
+        .header-title {
+            font-size: 2.5rem;
+        }
+
+        .main {
+            padding: 32px;
+            gap: 32px;
+        }
+    }

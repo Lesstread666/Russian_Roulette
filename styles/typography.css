@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'RubikWetPaint-Regular';
+    src: url(../fonts/RubikWetPaint-Regular.woff2) format('woff2'),
+    url(../fonts/RubikWetPaint-Regular.woff) format('woff');
+    font-weight: normal;
+  font-style: normal;
+}

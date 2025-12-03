@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Game</title>
+    <script defer src="./js/jquery-3.7.1.min.js"></script>
+    <script defer src="./js/script.js"></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/typography.css" />
+</head>
+
+<body>
+    <audio class="background-music" autoplay loop>
+        <source src="./sounds/background-music.mp3" type="audio/mp3">
+    </audio>
+
+    <video class="background-video" autoplay loop>
+        <source src="./visuals/smoke.mp4" type="video/mp4">
+    </video>
+
+    <audio class="fake-shot">
+        <source src="./sounds/revolver.mp3" type="audio/mp3">
+    </audio>
+
+    <audio class="real-shot">
+        <source src="./sounds/revolver-shot.mp3" type="audio/mp3">
+    </audio>
+
+    <header class="header">
+
+        <h1 class="header-title">
+            Russian Roulette
+        </h1>
+    </header>
+
+    <main class="main">
+
+        <section class="welcome-container">
+            <h2 class="intro-title">Welcome to the game</h2>
+
+            <div class="intro-text">
+                <p>You are playing Russian Roulette with a 6-shot revolver. Only <strong>one chamber</strong> contains a
+                    bullet, and its position is <strong>random</strong>.</p>
+
+                <p>Each round:</p>
+                <ul>
+                    <li>Players take turns firing at <strong>themselves</strong>.</li>
+                    <li>The game continues until someone dies.</li>
+                </ul>
+
+                <p>But there is a twist:</p>
+                <ul>
+                    <li>Once per game, each player may fire at the <strong>opponent</strong> instead.</li>
+                </ul>
+
+                <p>Stay sharp. Stay cold-blooded.</p>
+                <p>Luck matters — but your decisions matter more.</p>
+            </div>
+
+            <div class="score-board">
+                <h3>Game History</h3>
+                <p class="empty-score active">No games played yet.</p>
+                <ul class="score-list hidden"></ul>
+            </div>
+
+            <div class="start-quit-wrapper">
+                <button class="start-button">Let's start</button>
+                <button class="quit-button">Quit</button>
+            </div>
+        </section>
+
+        <section class="game-container hidden"></section>
+    </main>
+
+    <footer class="footer">
+        &copy;Russian Roulette 2025
+    </footer>
+
+</body>
+
+</html>
