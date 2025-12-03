@@ -31,16 +31,16 @@ function playRealShot() {
 }
 
 //Taking video and audio to play it once user click once on the page 
-document.addEventListener("click", () => {
-    if (music) {
-        music.muted = false;
-        music.play();
-    }
-    if (video) {
-        video.muted = false;
-        video.play();
-    }
-}, { once: true });
+// document.addEventListener("click", () => {
+//     if (music) {
+//         music.muted = false;
+//         music.play();
+//     }
+//     if (video) {
+//         video.muted = false;
+//         video.play();
+//     }
+// }, { once: true });
 
 //Function to play music only on welcome screen
 function updateMusic() {
@@ -68,7 +68,7 @@ $(".quit-button").on("click", function () {
 function startGame() {
     // ===PREPARE THE GAME===
     //prepare all stuff for the game: no game over, random 1 or 2 player, load Revolver
-    gameOver = false;
+meOver = false;
     currentPlayer = Math.floor(Math.random() * 2) + 1;
     loadRevolver();
     usedShootOpponent = { 1: false, 2: false };
