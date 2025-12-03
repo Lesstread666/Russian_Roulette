@@ -68,7 +68,7 @@ $(".quit-button").on("click", function () {
 function startGame() {
     // ===PREPARE THE GAME===
     //prepare all stuff for the game: no game over, random 1 or 2 player, load Revolver
-meOver = false;
+    gameOver = false;
     currentPlayer = Math.floor(Math.random() * 2) + 1;
     loadRevolver();
     usedShootOpponent = { 1: false, 2: false };
